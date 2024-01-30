@@ -1,139 +1,128 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>mywebsite</title>
-  <link href="./index.css" type="text/css" rel="stylesheet">
-  <style>
-      body {
-         background-color: white;
-      }
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your Name - Personal Website</title>
 </head>
-<body style="background-color:white">
-
-<div class="row">
-  <div class="column">
-    <h2>PROJECTS</h2>
-    <br><br>
-    <p>&emsp; &emsp; Human-AI Interaction Research</p>
-    <div class="img_hoverable">
-      <a target="_blank" href = "refining_AIs_explanatory_vocabulary.html">
-        <img src="/media/abstract.jpeg" alt="abstract" width = "75%" class="center">
-      </a>
-    </div>
-    <br>
-
-    <p>&emsp; &emsp; Minesweeper </p>
-    <div class="img_hoverable">
-      <a target="_blank" href = "https://github.com/cindysuu/hw09_local">
-        <img src="/media/minesweeper.jpeg" alt="minesweeper" width = "50%" class="center">
-      </a>
-    </div>
-    <br>
-
-    <p>&emsp; &emsp; Google Calendar </p>
-    <div class="img_hoverable">
-      <a target="_blank" href = "gcal_colors.html">
-        <img src="/media/gcal_colors.jpeg" alt="gcal_colors" width = "60%" class="center">
-      </a>
-    </div>
-    <br>
-
-    <p>&emsp; &emsp; Bridge4Good </p>
-    <div class="img_hoverable">
-      <a target="_blank" href = "https://bridge4good.com/">
-        <img src="/media/b4g.png" alt="bridge4goodlogo" width = "30%" height = "30%" class="center">
-      </a>
-    </div>
-    <br><br><br><br>
-
-
-  </div>
-  <div class="column">
+<body>
+<header>
+  <div class="title-container">
     <h1>Cindy Su</h1>
-    <p>Is me. Thanks for stopping by!
-      <br><br>
-      I am a sophomore at UPenn interested in Computer Science,
-      Statistics, and Design. In my free time I enjoy
-      <a target="_blank" href="https://www.goodreads.com/user/show/157943733-cindy">
-        reading all kinds of books</a> (send book recs!), exercising
-      (running, hiking, badminton), and experimenting with new recipes.
-      <br><br>
-      I would love to connect! <br>
-      <a target="_blank" href="mailto:xinsu0918@gmail.com"> Email </a> <br>
-      <a target="_blank" href="https://www.linkedin.com/in/cindy-su-867a5817b/"> Linkedin </a> <br>
-      <!--                <a target="_blank" href="https://vsco.co/cindyxsu/gallery"> VSCO </a> <br>-->
-      <a target="_blank" href="https://www.instagram.com/xin_cindy_su/"> Instagram </a> <br>
-      <!--                <a target="_blank" href="https://www.goodreads.com/user/show/157943733-cindy"> Goodreads </a> <br>-->
-    </p>
-    <br>
-    <br>
-    <h2>SNIPPETS</h2>
+  </div>
+</header>
+
+<section id="about" class="container">
+  <div class="profile-image"></div>
+
+  <h2>About</h2>
+  <p>Hey! I am a sophomore at the University of Pennsylvania studying
+    <span class="highlight">Computer and Information Science.</span>
+    I am interested in <span class="highlight">Software Development, AI/ML, Data Science, and Human-Computer Interaction.</span>
+  </p>
+
+  <p>I enjoy reading, running, and journaling in my free time. As someone from the PNW, I also love to hike
+    and explore the outdoors.  </p>
+
+  <p>Find me on
+    <a href="https://www.linkedin.com/in/cindy-su-867a5817b/" target="_blank">LinkedIn</a>,
+    <a href="https://www.instagram.com/xin_cindy_su/" target="_blank">Instagram</a>, and
+    <a href="https://www.goodreads.com/user/show/157943733-cindy" target="_blank">GoodReads</a>. </p>
+  <!-- Add more content about yourself -->
+</section>
+<hr>
+<hr2>
+
+  <section id="projects" class="container">
+    <!--    <h2>Projects</h2>-->
+
+    <!-- Showcase your projects with images, descriptions, and links -->
+
+    <!--    Programming-->
+    <h2> Programming </h2>
+
+    <section id="LOC8" class="project-container">
+      <h3>LOC8</h3>
+      <p>Find My, but better. LOC8 makes it easier than ever to see what your friends are up to on campus,
+        helping social interactions among college students be more casual and spontaneous.
+        Made using React Native and JavaScript with Firebase for account management.
+        Created at HackPrinceton because my friends and I thought that Find My
+        had limited features. Learn more <a href="https://devpost.com/software/findmy" target="_blank">here</a>.</p>
+    </section>
+
+    <section id="Juve" class="project-container">
+      <h3>Juve</h3>
+      <p>Application that helps elderly individuals recover from physical therapy by harnessing the
+        universal appeal of games with movement. Made using Python, HTML/CSS/JS and OpenCV at HackHarvard.
+        Learn more <a href="https://devpost.com/software/rejuvenate" target="_blank">here</a>.</p>
+    </section>
+
+    <section id="Minesweeper" class="project-container">
+      <h3>Minesweeper</h3>
+      <p>Game built using the Java Swing GUI framework for CIS 1200. Works just like the classic game.
+        Made because I love playing minesweeper. Play the game <a href="https://github.com/cindysuu/hw09_local" target="_blank">here</a>.</p>
+    </section>
+
+    <section id="Bridge4Good" class="project-container">
+      <h3>Bridge4Good</h3>
+      <p>A website dedicated to connecting homeless shelters with the resources they need during COVID-19.
+        Developed in a team of five at the Teens in AI #YouthVSCovid Hackathon and won 3rd place.
+        Made with a web app hosting platform with Flask to deploy back-end functionality.
+        Learn more <a href="https://devpost.com/software/bridge4good" target="_blank">here</a> and visit the
+        website <a href="https://bridge4good.com/" target="_blank">here</a>.
+      </p>
+    </section>
     <br><br>
 
-    <div class="img_row">
-      <div class="img_column">
-        <img src="media/t_art1.png"
-             alt="t-art2" width="50%">
-      </div>
-      <div class="img_column">
-        <img src="media/t_art2.jpeg"
-             alt="t-art2" width="50%">
-      </div>
-      <div class="img_column">
-        <div class="img_hoverable">
-          <a target="_blank" href = "https://t-artmagazine.com/current-issue/">
-            <img src="https://t-artmagazine.com/wp-content/uploads/2023/05/final-draft-copy-dragged-pdf.jpg"
-                 alt="t-art" width="75%">
-          </a>
-        </div>
-      </div>
 
-      <!-- <div class="img_hoverable_invert">
-        <a target="_blank" href = "nonconformity.html">
-          <img src="/media/nonconformity.jpeg" alt="nonconformity" width = "45%">
-        </a>
-      </div> -->
+    <!--    Design-->
+    <h2>Design</h2>
 
+    <section id="t-art" class="project-container">
+      <h3>t-art Magazine</h3>
+      <p>I am the Editorial Director for Penn's t-art Magazine, a campus publication dedicated to exploring the
+        intersections of art, technology, and culture.
+        Read our latest issue <a href="https://t-artmagazine.com/current-issue/" target="_blank">here</a>.</p>
+    </section>
+
+    <section id="Design" class="project-container">
+      <h3>Design 1000</h3>
+      <p>I am a beginner learning Adobe Creative Suite through working on projects. See a few of my works
+        <a target="_blank" href = "design.html"> here</a>.</p>
+    </section>
+    <br><br>
+
+    <!--    Research-->
+    <h2>Research</h2>
+
+    <section id="CSS" class="project-container">
+      <h3>Computational Social Science</h3>
+      <p> Currently working on <a target="_blank" href = "https://css.seas.upenn.edu/project/common-sense/">Common Sense</a>
+        at Penn's Computational Social Science Lab.</p>
+    </section>
+
+    <section id="HCI" class="project-container">
+      <h3>Human AI-Interaction</h3>
+      <p> Work on developing user-centered concepts at the University of Washington's
+        Lab for Human-AI Interaction. Built a recommendation model and training pipeline using Python and
+        Machine Learning libraries. Read the abstract <a target="_blank" href = "hai.html"> here</a>.</p>
+    </section>
+
+  </section>
+  <hr>
+
+  <!--<section id="resume" class="container">-->
+  <!--    <h2>Resume</h2>-->
+  <!--</section>-->
+  <!--<hr>-->
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Cindy Su. All rights reserved.</p>
     </div>
-    <br>
+  </footer>
 
-  </div>
-  <div class="column">
-    <h2>OTHER</h2>
-    <br><br><br>
-    <a target="_blank" href="https://vsco.co/cindyxsu/gallery"> VSCO </a> <br>
-    <p>More coming soon</p>
-
-    <!-- <br><br><br><br><br>
-    <h2>MEDIA</h2>
-    <br><br><br>
-    <img src="https://images.mubicdn.net/images/film/391/cache-25588-1617995748/image-w1280.jpg?size=1280x"
-         alt="Fallen Angels, Wong Kar-Wei" width="50%" class="center">
-    <img src="https://64.media.tumblr.com/71fdb52c01b68298914b074791ae25fa/tumblr_orm28q1W9k1v8rrbko1_1280.pnj"
-         alt="Fallen Angels, Wong Kar-Wei" width="50%" class="right">
-    <img src="https://imageio.forbes.com/specials-images/imageserve/643024b1d36e24d8473c0b56/beef2/960x0.jpg?format=jpg&width=960"
-         alt="Beef" width="50%" class="center">
-    <img src="https://c.files.bbci.co.uk/3F81/production/_128975261_everything-everywhere-hot-fog.jpg"
-         alt="Everything Everywhere All At Once" width="50%" class="left"> -->
-
-
-    <!-- <div class="img_hoverable">
-        <a target="_blank" href = "https://www.metmuseum.org/toah/hd/imml/hd_imml.htm">
-            <img src="/media/woman_with_a_parasol.jpg"
-                 alt="Woman With A Parasol, Monet" width="0%" class="center">
-        </a>
-    </div>
-    <div class="img_hoverable">
-        <a target="_blank" href = "https://aiweiweihumanity.com/">
-            <img src="https://assets.phillips.com/image/upload/t_Website_LotDetailMainImage/v1/auctions/NY010620/144194_001.jpg"
-                 alt="Surveillance Camera, Ai WeiWei" width=x50% class="center">
-        </a>
-    </div> -->
-
-  </div>
-</div>
-
-
+  <script src="script.js"></script>
 </body>
 </html>

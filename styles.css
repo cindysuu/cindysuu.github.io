@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.title-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    margin-left: 280px;
+    margin-right: 280px;
+}
+
+.highlight {
+    color: blue; /* Set the color you want for the specific words */
+}
+
+header {
+    background-color: #b2d0ca;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+section {
+    margin: 40px 0;
+}
+
+h2, h3 {
+    color: #585858;
+    line-height: 1.8
+}
+
+p {
+    color: #585858;
+    line-height: 1.8
+}
+
+.highlight {
+    color: #7BA59C;
+    line-height: 1.8
+}
+
+
+/* Styling for Hyperlinks */
+a {
+    color: #7BA59C; /* Default text color */
+    /* text-decoration: none;  Remove underline */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+a:hover {
+    color: #e76595;
+}
+
+
+/* Styling for Footer */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 0px 0;
+}
+
+
+/* Styling for Dividing Line */
+hr {
+    border: none;
+    height: 20px;
+    background-color: #b2d0ca;
+    margin-bottom: 10px;
+}
+
+
+/* Styling for Profile Photo */
+.profile-image {
+    width: 200px; /* Adjust the size of the circular image */
+    height: 200px;
+    border-radius: 50%; /* Make the image circular */
+    background-image: url('media/pfp3.png');
+    background-size: cover;
+    margin-right: 20px;
+}
+
+.about-content {
+    flex-grow: 1; /* Allow the content to grow and take remaining space */
+}
+
+
+/* Styling for Images */
+
+.image-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1000px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the container */
+}
+
+.center {
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0;
+}
+
+img {
+    margin: 10px;
+    padding: 0;
+    display: block;
+}
+
+
+/* Add more styles for other sections, links, images, etc. */
