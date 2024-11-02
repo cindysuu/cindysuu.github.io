@@ -5,38 +5,12 @@ body {
     background-color: #f4f4f4;
 }
 
-.background-container {
-    background-image: url('media/trees-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: -1;
-}
-
-.title {
-    color: white;
-    text-align: center;
-    padding-top: 300px;
-    font-size: 3em;
-}
-
-footer {
+.title-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
     color: #fff;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
-
-p {
-    color: white;
-    line-height: 1.8
-}
-
-
 
 .container {
     max-width: 1200px;
@@ -74,6 +48,11 @@ h2, h3 {
     line-height: 1.8
 }
 
+p {
+    color: #585858;
+    line-height: 1.8
+}
+
 .highlight {
     color: #7BA59C;
     line-height: 1.8
@@ -89,6 +68,14 @@ a {
 
 a:hover {
     color: #e76595;
+}
+
+
+/* Styling for Footer */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 0px 0;
 }
 
 
