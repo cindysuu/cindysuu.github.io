@@ -32,11 +32,12 @@
         <h1 class="text-5xl font-bold mt-4">Just for fun :)</h1>
 
         <!-- Helpful Tools -->
-        <section class="w-full flex mt-10">
+        <!-- Display vertically for smaller screens -->
+        <section class="w-full flex flex-col md:flex-row mt-10"> 
             <!-- Tool for telling people the closest national park based on their location (allow location or input address) -->
-            <div class="w-1/2 bg-green-700 p-8 flex flex-col items-center text-white">
-                <h1 class="text-2xl font-mono mb-4 mt-10 text-center">Get a National Park Near You</h1>
-                <div class="flex space-x-4 justify-center items-center mb-6">
+            <div class="w-full md:w-1/2 bg-green-700 p-8 flex flex-col items-center text-white">
+                <h1 class="text-xl md:text-2xl font-mono mb-4 mt-10 text-center">Get a National Park Near You</h1>
+                <div class="flex space-x-2 md:space-x-4 justify-center items-center mb-6">
                 <button onclick="getLocation()" class="bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
                     Use current location
                 </button>
@@ -50,25 +51,38 @@
             </div>
             
             <!-- Something else -->
-            <div class="w-1/2 bg-green-800 p-8 flex items-center justify-center text-white">
+            <div class="w-full md:w-1/2 bg-green-800 p-8 flex items-center justify-center text-white">
                 <!-- <h3 class="text-2xl font-bold">What to wear?</h3> -->
-                <p class="text-lg font">Coming soon</h3>
+                <div class="flex flex-col items-center">
+                    <p class="text-lg font">Coming soon</p>
+<!-- 
+                    <h1>GPT Generator</h1>
+                    <textarea class="text-black mb-4" id="userInput" placeholder="Enter your text here"></textarea>
+                    <button onclick="generateResponse()" class="bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800 mb-4">Generate</button>
+                    <p id="output"></p> -->
+                </div>
+
+                <script>
+                    async function generateResponse() {
+                    const userInput = document.getElementById('userInput').value;
+
+                    try {
+                        const response = await fetch('/generate', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ prompt: userInput })
+                        });
+
+                        const data = await response.json();
+                        document.getElementById('output').textContent = data.generatedText;
+                    } catch (error) {
+                        console.error('Error:', error);
+                        document.getElementById('output').textContent = 'Error generating response';
+                    }
+                    }
+                </script>
             </div>
         </section>
-
-        <!-- <section class="bg-green-700 p-8 mt-8 w-full text-center">
-            <h1 class="text-2xl font-mono mb-4 mt-10">Get a National Park Near You</h1>            
-            <div class="flex space-x-10 justify-center items-center">
-                <button onclick="getLocation()" class="bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
-                    Use current location
-                </button>
-                <p class="font-mono">or</p>
-                <button onclick="getRandomPark()" class="bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
-                    Surprise me
-                </button>
-            </div>
-            <p id="locationOutput" class="mt-4 text-white max-w-lg mx-auto"></p>
-        </section> -->
 
         <!-- Tool for telling people what they should do (my recommendations) -->
 
