@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Aleo', sans-serif;
+}
+
+@media (min-width: 640px) {
+    .max-w-custom-blog {
+        max-width: 40rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .max-w-custom-blog {
+        max-width: 50rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .max-w-custom-blog {
+        max-width: 60rem;
+    }
+}

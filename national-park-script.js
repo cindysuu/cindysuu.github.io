@@ -97,10 +97,10 @@ async function getRandomPark() {
             const randomPark = data.data[randomIndex];
 
             document.getElementById("locationOutput").innerHTML = `
-                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 max-w-sm md:max-w-md mx-auto mt-6">
-                    <h3 class="text-lg md:text-2xl font-bold font-mono mb-2">${randomPark.fullName}</h3>
-                    <p class="text-sm md:text-lg text-gray-700 font-mono mb-4">${randomPark.description}</p>
-                    <a href="${randomPark.url}" target="_blank" class="text-sm md:text-lg text-blue-500 font-mono hover:underline">Learn more</a>
+                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 max-w-sm md:max-w-md mx-auto">
+                    <h3 class="text-lg md:text-xl font-bold font-mono mb-2">${randomPark.fullName}</h3>
+                    <p class="text-sm md:text-md text-gray-700 font-mono mb-4">${randomPark.description}</p>
+                    <a href="${randomPark.url}" target="_blank" class="text-sm md:text-md text-blue-500 font-mono hover:underline">Learn more</a>
                 </div>
             `;
         } else {

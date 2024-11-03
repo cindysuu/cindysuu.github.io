@@ -1,0 +1,28 @@
+<!-- Tool for telling people the closest national park based on their location (allow location or input address) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Park Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-green-100 flex items-center justify-center min-h-screen">
+    <div class="w-full h-100 md:w-1/2 bg-green-700 p-8 flex flex-col items-center text-white">
+        <h1 class="text-lg md:text-xl md:text-2xl font-mono mb-4 mt-10 text-center">Get a National Park Near You</h1>
+        <div class="flex space-x-2 md:space-x-4 justify-center items-center mb-6">
+            <button onclick="getLocation()" class="text-sm md:text-lg bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                Use current location
+            </button>
+            <p class="font-mono">or</p>
+            <button onclick="getRandomPark()" class="text-sm md:text-lg bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                Surprise me
+            </button>
+        </div>
+        <p id="locationOutput" class="mt-4 text-white max-w-lg mx-auto"></p>
+    </div>
+    <script src="national-park-script.js"></script>
+</body>
+</html>
