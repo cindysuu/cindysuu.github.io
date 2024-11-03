@@ -12,7 +12,7 @@
 <body class="bg-[#003865] text-white">
 
   <!-- Navigation -->
-  <nav class="p-4 text-white justify-center flex items-center">
+  <nav class="p-4 text-white flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
     <ul class="flex space-x-4">
       <li class="text-white text-lg">I <3</li>
       <li><a href="builder.html" class="hover:underline text-lg">Building</a></li>
@@ -29,15 +29,15 @@
   </nav>
   
   <!-- Main content -->
-  <main class="flex flex-col items-center justify-center h-screen">
-    <h1 class="text-5xl font-bold mt-4">Things I have built</h1>
+  <main class="flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-3xl sm:text-5xl font-bold mt-6 text-center">Things I have built</h1>
     <!-- <p class="mt-4 text-lg text-gray-300">I love building things and bringing ideas to life!</p> -->
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
         <!-- Project Card 1 -->
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div class="w-full max-w-xs sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <p class="text-6xl mt-4 mx-4">👩🏻‍💻</p>
-            <div class="p-5">
+            <div class="p-4 sm:p-5">
               <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">This Website</h5>
               </a>
@@ -56,41 +56,41 @@
         </div>
 
         <!-- Project Card 2 -->
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <p class="text-6xl mt-4 mx-4">💵</p>
-            <div class="p-5">
-				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Futures</h5>
-				<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-					A financial literacy app for kids, made for HackMIT. 
-				</p>
-              
-				<!-- Modal -->
-				<button onclick="openModal()" class="mx-4 flex items-center px-5 py-2.5 text-sm font-medium text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
-					Read more
-					<svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-					</svg>
-				</button>
+        <div class="w-full max-w-xs sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <p class="text-6xl mt-4 mx-4">💵</p>
+          <div class="p-4 sm:p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Futures</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              A financial literacy app for kids, made for HackMIT. 
+            </p>
+                  
+            <!-- Modal -->
+            <button onclick="openModal()" class="mx-4 flex items-center px-5 py-2.5 text-sm font-medium text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+              Read more
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </button>
 
-				<!-- Links -->
-				<div class="flex justify-start space-x-4 mt-5">
-					<a href="https://github.com/cindysuu/hackmit2024" target="_blank" rel="noopener noreferrer"></a>
-						<button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 me-2 mb-2">
-							<svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.475 5.92.43.37.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-							</svg>
-							GitHub
-						</button>
-					</a>
-					<a href="https://ballot.hackmit.org/project/xynhg-ekohf-ffaxn-cgsbr" target="_blank" rel="noopener noreferrer">
-						<button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-blue-800 me-2 mb-2">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-							</svg>                      
-							Documentation
-						</button>
-					</a>
-				</div>
+            <!-- Links -->
+            <div class="flex justify-start space-x-4 mt-5">
+              <a href="https://github.com/cindysuu/hackmit2024" target="_blank" rel="noopener noreferrer"></a>
+                <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-xs sm:text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 mb-2">
+                  <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.475 5.92.43.37.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  GitHub
+                </button>
+              </a>
+              <a href="https://ballot.hackmit.org/project/xynhg-ekohf-ffaxn-cgsbr" target="_blank" rel="noopener noreferrer">
+                <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-blue-800 me-2 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                  </svg>                      
+                  Documentation
+                </button>
+              </a>
+            </div>
         	</div>
         </div>
 		<div id="myModal" class="fixed inset-0 hidden bg-gray-800 bg-opacity-75 flex items-center justify-center">
@@ -112,9 +112,9 @@
         </div>
 
         <!-- Project Card 3 -->
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <p class="text-6xl mt-4 mx-4">👭</p>
-            <div class="p-5">
+        <div class="w-full max-w-xs sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <p class="text-6xl mt-4 mx-4">👭</p>
+          <div class="p-4 sm:p-5">
 				<a href="#">
 					<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Instalite</h5>
 				</a>
@@ -132,8 +132,10 @@
 						</button>
 					</a>
 					<a href="https://resisted-kitty-435.notion.site/Instalite-Code-Documentation-aca0c085983c4c37aaaa634ce1b75b78" target="_blank" rel="noopener noreferrer">
-						<button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-blue-800 me-2 mb-2">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+						<button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-blue-800 me-2 mb-2">
+            <!-- <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 text-center inline-flex items-center dark:focus:ring-gray-700 mb-2"> -->
+	
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
 							</svg>                      
 							Documentation
@@ -144,9 +146,9 @@
         </div>
   
         <!-- Project Card 4 -->
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <p class="text-6xl mt-4 mx-4">📍</p>
-            <div class="p-5">
+        <div class="w-full max-w-xs sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <p class="text-6xl mt-4 mx-4">📍</p>
+          <div class="p-4 sm:p-5">
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Loc8</h5>
             </a>
@@ -165,9 +167,9 @@
         </div>
         
         <!-- Project Card 5 -->
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div class="w-full max-w-xs sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <p class="text-6xl mt-4 mx-4">📱</p>
-            <div class="p-5">
+            <div class="p-4 sm:p-5">
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Food Truck Finder</h5>
             </a>
