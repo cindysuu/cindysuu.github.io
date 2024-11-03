@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <title>I <3 to build</title>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <!-- Navigation -->
+  <nav class="p-4 text-white justify-center flex items-center">
+    <ul class="flex space-x-4">
+      <li class="text-white text-lg">I <3</li>
+      <li><a href="builder.html" class="hover:underline text-lg">Building</a></li>
+      <li><a href="student.html" class="hover:underline text-lg">Learning</a></li>
+      <li><a href="person.html" class="hover:underline text-lg">Being a Relatable Person</a></li>
+      <li>
+        <a href="index.html" class="hover:underline text-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <!-- Main content -->
+  <main class="flex flex-col items-center justify-center h-screen">
+    <h1 class="text-5xl font-bold mt-4">Builder</h1>
+    <p class="mt-4 text-lg text-gray-300">I love building things and bringing ideas to life!</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <!-- Project Card 1 -->
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <p class="text-6xl mt-4 mx-4">👩🏻‍💻</p>
+            <div class="p-5">
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">This Website</h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">I developed this website using HTML, JS, and Tailwind.</p>
+
+              <!-- Github link -->
+              <a href="https://github.com/cindysuu/cindysuu.github.io" target="_blank" rel="noopener noreferrer">
+                <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 me-2 mb-2">
+                    <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.475 5.92.43.37.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </button>
+              </a>
+            </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <p class="text-6xl mt-4 mx-4">💵</p>
+            <div class="p-5">
+				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Futures</h5>
+				<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+					A financial literacy app for kids, made for HackMIT. 
+				</p>
+              
+				<!-- Modal -->
+				<button onclick="openModal()" class="mx-4 flex items-center px-5 py-2.5 text-sm font-medium text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+					Read more
+					<svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+					</svg>
+				</button>
+
+				<!-- Links -->
+				<div class="flex justify-start space-x-4 mt-5">
+					<a href="https://github.com/cindysuu/hackmit2024" target="_blank" rel="noopener noreferrer"></a>
+						<button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 me-2 mb-2">
+							<svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.475 5.92.43.37.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+							</svg>
+							GitHub
+						</button>
+					</a>
+					<a href="https://ballot.hackmit.org/project/xynhg-ekohf-ffaxn-cgsbr" target="_blank" rel="noopener noreferrer">
+						<button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-blue-800 me-2 mb-2">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+							</svg>                      
+							Documentation
+						</button>
+					</a>
+				</div>
+        	</div>
+        </div>
+		<div id="myModal" class="fixed inset-0 hidden bg-gray-800 bg-opacity-75 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-800">Thoughts</h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-800">&times;</button>
+                </div>
+                <p class="text-gray-600">I recently came to the uncomfortable realization that I know nothing about personal finances–how to manage my spending,
+					how to choose a credit card, and most importantly, how to invest. This led me and a few friends to the idea of building
+					a financial literacy platform for children to learn investing fundamentals through an engaging experience,
+					using virtual gems for trading real-time stocks from companies like Netflix, McDonald’s, Disney, and more.
+					Kids can then cash in their returns through a gem-to-dollar exchange rate that a parent account can set,
+					not only providing great incentive to wait and make a return on their investment but also minimizing parents' risks of losing any substantial amount of money.
+					I'm proud that we were able to build this idea within 24 hours for HackMIT and especially enjoyed the challenge of making this a kid-friendly adaptation
+					(cross-platform, fun animations, easy-to-understand stock trends, LLM-generated financial trends).</p>
+                <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Close</button>
+            </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <p class="text-6xl mt-4 mx-4">👭</p>
+            <div class="p-5">
+				<a href="#">
+					<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Instalite</h5>
+				</a>
+				<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lightweight version of Instagram with features including real-time data streaming, face match, and recommendation algorithms.</p>
+				
+
+				<!-- Links -->
+				<div class="flex justify-start space-x-4">
+					<a href="https://github.com/upenn-nets-2120/project-2216" target="_blank" rel="noopener noreferrer"></a>
+						<button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 me-2 mb-2">
+							<svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.475 5.92.43.37.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+							</svg>
+							GitHub
+						</button>
+					</a>
+					<a href="https://resisted-kitty-435.notion.site/Instalite-Code-Documentation-aca0c085983c4c37aaaa634ce1b75b78" target="_blank" rel="noopener noreferrer">
+						<button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-blue-800 me-2 mb-2">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+							</svg>                      
+							Documentation
+						</button>
+					</a>
+				</div>
+            </div>
+        </div>
+  
+        <!-- Project Card 4 -->
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <p class="text-6xl mt-4 mx-4">📍</p>
+            <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Loc8</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">React Native App that allows college students to find their friends on campuses and nudge them to meet up.</p>
+            
+            <!-- Github link -->
+            <a href="https://github.com/cindysuu/campus-finder" target="_blank" rel="noopener noreferrer">
+                <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 me-2 mb-2">
+                    <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.475 5.92.43.37.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </button>
+              </a>
+            </div>
+        </div>
+        
+        <!-- Project Card 5 -->
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <p class="text-6xl mt-4 mx-4">📱</p>
+            <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Food Truck Finder</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">iOS app that is like Google Maps, but for local food trucks.</p>
+            
+            <!-- Github link -->
+            <a href="https://github.com/chenxyuhua/cis1951-final-project" target="_blank" rel="noopener noreferrer">
+                <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 me-2 mb-2">
+                    <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.475 5.92.43.37.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </button>
+              </a>
+            </div>
+        </div>
+
+		<!-- More coming soon -->
+		<div class="flex justify-center items-center mt-8">
+			<p class="text-xl text-gray-400">Coming soon...</p>
+		</div>
+    </div>
+
+    <script src="script.js"></script>
+  </main>
+
+</body>
+</html>

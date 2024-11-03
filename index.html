@@ -9,17 +9,87 @@
   <title>cindysu</title>
 </head>
 
-<body class="relative h-screen w-full bg-cover bg-center bg-fixed" id="backgroundContainer" style="background-image: url('media/trees-background.jpg');">
+<!-- <body class="relative h-screen w-full bg-cover bg-center bg-fixed" id="backgroundContainer" style="background-image: url('media/trees-background.jpg');"> -->
+<body class="relative h-screen w-full bg-cover bg-center bg-fixed bg-gray-900" id="backgroundContainer">
 
+  <!-- Main content -->
   <div class="absolute inset-0 flex items-center justify-center flex-col text-center">
-      <button type="button" id="changeBackgroundButton" class="bg-gradient-to-r from-emerald-400 from-30% to-blue-400 to-70% bg-clip-text text-transparent text-xl font-bold hover:from-yellow-400 hover:to-pink-400 -mt-24">
-        Take me Somewhere Nice
-      </button>
+    <!-- Take me anywhere feature -->
+    <button type="button" id="changeBackgroundButton" class="bg-gradient-to-r from-emerald-400 from-30% to-blue-400 to-70% bg-clip-text text-transparent text-xl font-bold hover:from-yellow-400 hover:to-pink-400 -mt-24">
+      Take me Somewhere Nice
+    </button>
 
-      <h1 class="text-white text-7xl mt-20 font-bold">Cindy Su</h1>
+    <!-- Name -->
+    <h1 class="text-white text-7xl mt-20 font-bold">Cindy Su</h1>
+
+    <!-- Navigation -->
+    <ul class="flex space-x-4 mt-10 p-4 rounded-md">
+      <p class="text-white text-xl">I <3</p>
+      <li><a href="builder.html" class="text-white text-xl hover:underline">Building</a></li>
+      <li><a href="student.html" class="text-white text-xl hover:underline">Learning</a></li>
+      <li><a href="person.html" class="text-white text-xl hover:underline">Being a Relatable Person</a></li>
+    </ul>
     
+    <div class="flex space-x-4">
+    <!-- Color picker -->
+    <input type="color" class="p-1 h-10 w-14 block bg-white border border-gray-100 cursor-pointer rounded-lg" id="hs-color-input" value="#101827" title="Choose your color">
+    
+    <!-- Color links -->
+    <div class="mt-4">
+      <div class="flex space-x-4 mt-2">
+        <button class="bg-[#101827] p-2 rounded-full" onclick="updateBackgroundColorFromPreset('#101827')" title="Default"></button>
+        <button class="bg-[#91AE56] p-2 rounded-full" onclick="updateBackgroundColorFromPreset('#91AE56')" title="Green"></button>
+        <!-- <button class="bg-[#85c700] p-2 rounded-full" onclick="updateBackgroundColorFromPreset('#85c700')" title="Brat green"></button> -->
+        <button class="bg-sky-300 p-2 rounded-full" onclick="updateBackgroundColorFromPreset('#93c5fd')" title="Sky"></button>
+        <button class="bg-amber-300 p-2 rounded-full" onclick="updateBackgroundColorFromPreset('#fcd34d')" title="Amber"></button>
+        <button class="bg-[#f97316] p-2 rounded-full" onclick="updateBackgroundColorFromPreset('#f97316')" title="Orange"></button>
+      </div>
+    </div>
+    </div>
+
+    <!-- <script>
+      function setColor(color) {
+        document.getElementById('backgroundContainer').style.backgroundColor = color;
+        document.getElementById('hs-color-input').value = color;
+      }
+    </script> -->
+
+    <!-- Typing effect -->
+    <h1 id="typewriter" class="text-xl text-white absolute mt-10 mb-5"></h1>
   </div>
 
+  <!-- Typing Effect -->
+  <script>
+    const words = ["I love coffee, matcha, and brunch", "I traveled to 7 countries this summer", "I love Beli"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    function type() {
+      currentWord = words[i];
+      if (isDeleting) {
+        document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
+        j--;
+        if (j == 0) {
+          isDeleting = false;
+          i++;
+          if (i == words.length) {
+            i = 0;
+          }
+        }
+      } else {
+        document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+        j++;
+        if (j == currentWord.length) {
+          isDeleting = true;
+        }
+      }
+      setTimeout(type, 100);
+    }
+    type();
+  </script>
+
+  <!-- Footer -->
   <footer class="absolute bottom-0 w-full text-center p-4 text-white">
     <div class="flex justify-center space-x-4 mt-4">
       <!-- <a href="https://twitter.com" target="_blank" class="text-white hover:text-blue-400">
@@ -42,42 +112,5 @@
   
     <script src="script.js"></script>
 </body>
-
-  <!-- Tailwind Examples
-  <nav class="bg-blue-500 p-4 text-white flex justify-between items-center">
-    <div class="text-lg font-bold">My Website</div>
-    <ul class="flex space-x-4">
-        <li><a href="#" class="hover:text-blue-300">Home</a></li>
-        <li><a href="#" class="hover:text-blue-300">About</a></li>
-        <li><a href="#" class="hover:text-blue-300">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6 m-4">
-    <img class="w-full" src="https://source.unsplash.com/random" alt="Random image">
-    <div class="px-6 py-4">
-        <h2 class="font-bold text-xl mb-2">Sample Card Title</h2>
-        <p class="text-gray-700 text-base">
-            This is a sample card component created with Tailwind CSS. You can use it to display information in a visually appealing way.
-        </p>
-    </div>
-  </div>
-
-  <div class="bg-blue-500 text-white p-4">
-    Tailwind Test - This should have a blue background if Tailwind is working.
-  </div> -->
-
-  <!-- <div class="background-container">
-    <h1 class="title">Cindy Su</h1>
-    <p class="bg-blue-500"> Take me Somewhere Nice</p>
-  </div>
-
-  <div class="text-center">
-    <h1 class="text-5xl font-bold text-gray-800">Cindy Su</h1>
-    <p class="text-lg text-gray-500 mt-2">Take me somewhere nice</p>
-  </div>
-
-  <script src="script.js"></script>
-</body> -->
 
 </html>
