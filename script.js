@@ -3,7 +3,9 @@ let isImageBackground = false;
 // For updating bg image
 function changeBackground() {
     const backgroundContainer = document.getElementById('backgroundContainer');
-    backgroundContainer.style.backgroundImage = `url('https://picsum.photos/1920/1080?random=${Math.floor(Math.random() * 1000)}')`;
+    const isMobile = window.innerWidth <= 768;
+    const imageUrl = isMobile ? 'https://picsum.photos/768/1024?random=' : 'https://picsum.photos/1920/1080?random=';
+    backgroundContainer.style.backgroundImage = `url('${imageUrl}${Math.floor(Math.random() * 1000)}')`;
     isImageBackground = true;
 }
 
