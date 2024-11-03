@@ -23,3 +23,9 @@ body {
         max-width: 60rem;
     }
 }
+
+@media (max-width: 1000px) {
+    .max-w-mobile-card {
+        max-width: 20rem;
+    }
+}

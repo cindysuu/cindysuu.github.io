@@ -12,16 +12,16 @@
   <title>I <3 to build</title>
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
 
   <div id="header-placeholder"></div>
   <script src="loadHeader.js"></script>
   
-  <!-- Main content -->
-  <main class="flex flex-col items-center justify-center min-h-screen">
+  <!-- <main class="flex flex-col items-center justify-center min-h-screen"> -->
+    <!-- <main class="flex flex-col flex-grow items-center justify-center min-h-screen"> -->
+  <main class="flex-grow flex flex-col items-center justify-center min-h-screen">
     <h1 class="text-3xl sm:text-5xl font-bold mt-6 text-center">Things I have built</h1>
-    <!-- <p class="mt-4 text-lg text-gray-300">I love building things and bringing ideas to life!</p> -->
-    
+  
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
         <!-- Project Card 1 -->
         <div class="w-full max-w-xs sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -183,8 +183,25 @@
     <script src="script.js"></script>
   </main>
 
-  <div id="footer-placeholder"></div>
-  <script src="loadFooter.js"></script>
-
+  <footer class="w-fulltext-center p-4 text-white">
+    <div class="flex justify-center space-x-4 mt-4">
+      <a href="https://www.linkedin.com/in/cindy-su-867a5817b/" target="_blank" class="text-white hover:text-blue-400">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.5c-1.14 0-2.06-.93-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.13-.92 2.06-2.06 2.06zm14.11 12.95h-3.56v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7H8.3V9h3.42v1.56h.05c.48-.91 1.66-1.87 3.42-1.87 3.66 0 4.34 2.41 4.34 5.54v6.22z"/>
+        </svg>
+      </a>
+      <a href="https://github.com/cindysuu" target="_blank" class="text-white hover:text-blue-400</svg>">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.17c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.744.083-.729.083-.729 1.205.084 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.998.108-.775.42-1.305.763-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.47-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.98-.399 3-.405 1.02.006 2.043.139 3 .405 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.24 2.873.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.62-5.475 5.92.43.37.823 1.1.823 2.22v3.293c0 .32.218.694.825.577C20.565 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+      <a href="mailto:cindysu@seas.upenn.edu" class="text-white hover:text-blue-400">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 12.713l11.985-7.713H.015L12 12.713zm0 2.287L.015 7.287v12.426h23.97V7.287L12 15z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="mt-2 text-sm text-center">&copy; 2024 Cindy Su.</p>
+  </footer>
 </body>
 </html>
