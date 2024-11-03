@@ -9,12 +9,12 @@
   <title>For fun</title>
 </head>
 
-<body class="bg-[#003865] text-white">
+<body class="bg-white text-black">
 
    <!-- Navigation -->
-    <nav class="p-4 text-white justify-center flex items-center">
+    <nav class="p-4 text-black justify-center flex items-center">
         <ul class="flex space-x-4">
-        <li class="text-white text-lg">I <3</li>
+        <li class="text-black text-lg">I <3</li>
         <li><a href="builder.html" class="hover:underline text-lg">Building</a></li>
         <li><a href="student.html" class="hover:underline text-lg">Learning</a></li>
         <li><a href="person.html" class="hover:underline text-lg">Being a Relatable Person</a></li>
@@ -28,39 +28,84 @@
         </ul>
     </nav>
 
-    <main class="flex flex-col items-center justify-center h-screen overflow-y-auto">
+    <main class="flex flex-col items-center justify-center w-full overflow-y-auto">
         <h1 class="text-5xl font-bold mt-4">Just for fun :)</h1>
 
-        <div class="flex space-x-20 mt-4">
+        <!-- Helpful Tools -->
+        <section class="w-full flex mt-10">
+            <!-- Tool for telling people the closest national park based on their location (allow location or input address) -->
+            <div class="w-1/2 bg-green-700 p-8 flex flex-col items-center text-white">
+                <h1 class="text-2xl font-mono mb-4 mt-10 text-center">Get a National Park Near You</h1>
+                <div class="flex space-x-4 justify-center items-center mb-6">
+                <button onclick="getLocation()" class="bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                    Use current location
+                </button>
+                <p class="font-mono">or</p>
+                <button onclick="getRandomPark()" class="bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                    Surprise me
+                </button>
+                </div>
+                <p id="locationOutput" class="mt-4 text-white max-w-lg mx-auto"></p>
+                </div>
+            </div>
+            
+            <!-- Something else -->
+            <div class="w-1/2 bg-green-800 p-8 flex items-center justify-center text-white">
+                <!-- <h3 class="text-2xl font-bold">What to wear?</h3> -->
+                <p class="text-lg font">Coming soon</h3>
+            </div>
+        </section>
+
+        <!-- <section class="bg-green-700 p-8 mt-8 w-full text-center">
+            <h1 class="text-2xl font-mono mb-4 mt-10">Get a National Park Near You</h1>            
+            <div class="flex space-x-10 justify-center items-center">
+                <button onclick="getLocation()" class="bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                    Use current location
+                </button>
+                <p class="font-mono">or</p>
+                <button onclick="getRandomPark()" class="bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                    Surprise me
+                </button>
+            </div>
+            <p id="locationOutput" class="mt-4 text-white max-w-lg mx-auto"></p>
+        </section> -->
+
+        <!-- Tool for telling people what they should do (my recommendations) -->
+
+        <!-- Tool for telling people what to wear based on the weather -->
+
+        <!-- Mini blog -->
+
+        <div class="grid grid-cols-3 gap-0 text-white">
             <!-- Recent Thoughts -->
-            <section class="mt-8 max-w-sm mx-auto">
+            <section class="bg-sky-600 p-6">
                 <h2 class="text-3xl font-semibold mb-4">Recent Thoughts</h2>
                 <ul class="list-disc list-outside space-y-2">
                     <li class="text-lg">Being 20 is like being 0 again</li>
                     <li class="text-lg">Wow is it hard to live in the moment, but wow is it nice to live in the moment</li>
-                    <li class="text-lg">Sometimes its better to do your best and bloom where you're planted</li>
+                    <li class="text-lg">Sometimes it's better to do your best and bloom where you're planted</li>
                     <li class="text-lg">Late lunch > normal lunch</li>
                     <li class="text-lg">There should be a day where it's illegal to do any work</li>
                 </ul>
             </section>
-
+        
             <!-- Recent Obsessions -->
-            <section class="mt-8 max-w-sm mx-auto">
+            <section class="bg-sky-600 p-6">
                 <h2 class="text-3xl font-semibold mb-4">Recent Obsessions</h2>
                 <ul class="list-disc list-outside space-y-2">
                     <li class="text-lg">Meal prepping with the same foods but in different combinations</li>
                     <li class="text-lg">Running (largely because I signed up for a race)</li>
                     <li class="text-lg">Digital detoxing and reducing my time on social media</li>
                     <li class="text-lg">Making a plan for what to do if you fail</li>
-                    <li class="text-lg">Normalizing saying no to things and not feeling fomo</li>
+                    <li class="text-lg">Normalizing saying no to things and not feeling FOMO</li>
                     <li class="text-lg">Leaving well-crafted reviews on Beli</li>
                 </ul>
             </section>
-
-            <!-- Long Time Obsessions -->
-            <section class="mt-8">
+        
+            <!-- Long-Time Obsessions -->
+            <section class="bg-sky-600 p-6">
                 <h2 class="text-3xl font-semibold mb-4">Not Recent Obsessions</h2>
-                <ul class="list-disc list-inside space-y-2">
+                <ul class="list-disc list-outside space-y-2">
                     <li class="text-lg">Hiking and road trips and national parks</li>
                     <li class="text-lg">Waking up whenever you want to</li>
                     <li class="text-lg">Food</li>
@@ -69,14 +114,7 @@
             </section>
         </div>
 
-
-        
-        
-        <!-- Send me a message -->
-
-        <!-- Tool for telling people what they should do (my recommendations) -->
-
-        <!-- Tool for telling people what to wear based on the weather -->
+        <script src="national-park-script.js"></script>
     </main>
 
 </body>
