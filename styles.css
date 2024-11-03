@@ -29,3 +29,23 @@ body {
         max-width: 20rem;
     }
 }
+
+/* Initial state for fade-in */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in-active {
+    opacity: 1;
+}
+
+/* Fade-out transition */
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-out-active {
+    opacity: 0;
+}

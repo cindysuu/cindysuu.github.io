@@ -51,3 +51,26 @@ function closeModal() {
     document.getElementById("myModal").classList.add("hidden");
 }
   
+// Fade in/out transition
+document.addEventListener("DOMContentLoaded", () => {
+    const content = document.querySelector("main"); // Adjust selector to your main content area
+    content.classList.add("fade-in");
+    setTimeout(() => content.classList.add("fade-in-active"), 10);
+
+    // Handle link clicks to apply fade-out transition
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const url = link.getAttribute("href");
+
+            // Add fade-out classes
+            content.classList.remove("fade-in-active");
+            content.classList.add("fade-out");
+
+            // Navigate after the transition
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // Matches transition duration
+        });
+    });
+});
