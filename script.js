@@ -53,7 +53,7 @@ function closeModal() {
   
 // Fade in/out transition
 document.addEventListener("DOMContentLoaded", () => {
-    const content = document.querySelector("main"); // Adjust selector to your main content area
+    const content = document.querySelector("body"); // Adjust selector to your main content area
     content.classList.add("fade-in");
     setTimeout(() => content.classList.add("fade-in-active"), 10);
 
