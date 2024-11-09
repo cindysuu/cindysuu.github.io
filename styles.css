@@ -94,3 +94,32 @@ body {
 .blog-list-item {
     @apply text-lg md:text-xl text-gray-800;
 }
+
+/* Image and Image Hovering */
+.image-frame {
+    @apply relative rounded-lg shadow-md p-0 bg-white w-[30rem] h-[30rem] overflow-hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-frame img {
+    @apply w-full h-full object-cover transition-opacity duration-300;
+}
+
+/* Dark Overlay */
+.image-frame::before {
+    @apply absolute inset-0 bg-black opacity-0 transition-opacity duration-300;
+    content: '';
+    z-index: 10;
+}
+
+.image-frame:hover::before {
+    @apply opacity-70;
+}
+
+.hover-text {
+    @apply absolute inset-0 flex items-center justify-center text-white text-lg font-semibold opacity-0 m-4 transition-opacity duration-300 z-20 pointer-events-none;
+}
+
+.image-frame:hover .hover-text {
+    @apply opacity-100;
+}
