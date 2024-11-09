@@ -1,28 +1,50 @@
 <!-- Tool for telling people the closest national park based on their location (allow location or input address) -->
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="dist/output.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <title>National Park Finder</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
+  </head>
 
-<body class="bg-green-100 flex items-center justify-center min-h-screen">
-    <div class="w-full h-100 md:w-1/2 bg-green-700 p-8 flex flex-col items-center text-white">
-        <h1 class="text-lg md:text-xl md:text-2xl font-mono mb-4 mt-10 text-center">Get a National Park Near You</h1>
-        <div class="flex space-x-2 md:space-x-4 justify-center items-center mb-6">
-            <button onclick="getLocation()" class="text-sm md:text-lg bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
-                Use current location
-            </button>
-            <p class="font-mono">or</p>
-            <button onclick="getRandomPark()" class="text-sm md:text-lg bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
-                Surprise me
-            </button>
+<!-- <body class="bg-gray-900 flex items-center justify-center min-h-screen"> -->
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+
+    <div id="header-placeholder"></div>
+    <script src="loadHeader.js"></script>
+
+    <div class="flex justify-center w-full mt-20">
+        <div class="w-full h-100 md:w-1/2 bg-green-700 p-8 flex flex-col items-center text-white">
+            <h1 class="text-lg md:text-xl md:text-2xl font-mono mb-4 mt-10 text-center">Get a National Park Near You</h1>
+            <div class="flex space-x-2 md:space-x-4 justify-center items-center mb-6">
+                <button onclick="getLocation()" class="text-sm md:text-lg bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                    <!-- Generate using current location -->
+                    Use current location
+                </button>
+                <p class="font-mono">or</p>
+                <button onclick="getRandomPark()" class="text-sm md:text-lg bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                    Surprise me
+                </button>
+            </div>
+            <p id="locationOutput" class="mt-4 text-white max-w-lg mx-auto"></p>
         </div>
-        <p id="locationOutput" class="mt-4 text-white max-w-lg mx-auto"></p>
+        
+        <!-- <div id="activity-filter" class="flex flex-col items-start mt-4">
+            <h2 class="text-lg font-bold mb-2">Select Activities:</h2>
+            <label><input type="checkbox" name="activity" value="astronomy"> Astronomy</label>
+            <label><input type="checkbox" name="activity" value="hiking"> Hiking</label>
+            <label><input type="checkbox" name="activity" value="wildlife-watching"> Wildlife Watching</label>
+            <button onclick="getRandomPark()" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Find Parks</button>
+        </div> -->
+        
     </div>
+
     <script src="national-park-script.js"></script>
 </body>
 </html>

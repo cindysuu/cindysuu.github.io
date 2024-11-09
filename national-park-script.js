@@ -59,11 +59,11 @@ async function findNearbyParks(latitude, longitude) {
 
             const closestPark = parksWithDists.sort((a, b) => a.distance - b.distance)[0];
             document.getElementById("locationOutput").innerHTML = `
-                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 max-w-md mx-auto mt-6">
-                    <h3 class="text-2xl font-mono font-bold mb-2">${closestPark.fullName}</h3>
-                    <p class="text-gray-700 font-mono mb-4">${closestPark.distance.toFixed(2)} miles away</p>
-                    <p class="text-gray-700 font-mono mb-4">${closestPark.description}</p>
-                    <a href="${closestPark.url}" target="_blank" class="text-blue-500 font-mono hover:underline">Learn more</a>
+                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 max-w-sm md:max-w-md mx-auto">
+                    <h3 class="text-lg md:text-xl font-bold font-mono mb-2">${closestPark.fullName}</h3>
+                    <p class="text-sm md:text-md text-gray-700 font-mono mb-4">${closestPark.distance.toFixed(2)} miles away</p>
+                    <p class="text-sm md:text-md text-gray-700 font-mono mb-4">${closestPark.description}</p>
+                    <a href="${closestPark.url}" target="_blank" class="text-sm md:text-md text-blue-500 font-mono hover:underline">Learn more</a>
                 </div>
             `;
         } else {
@@ -105,6 +105,44 @@ async function getRandomPark() {
             `;
         } else {
             document.getElementById("locationOutput").innerText = "No parks found.";
+        }
+    } catch (error) {
+        document.getElementById("locationOutput").innerText = "Error fetching park data.";
+        console.error("Error:", error);
+    }
+}
+
+async function filterParksByActivities() {
+    const selectedActivities = Array.from(document.querySelectorAll('input[name="activity"]:checked'))
+    .map(input => input.value);
+    if (selectedActivities.length === 0) {
+        document.getElementById("locationOutput").innerText = "Please select at least one activity.";
+        return;
+    }
+    const activityIds = selectedActivities.join(',');
+    const activitiesEndpoint = 'https://developer.nps.gov/api/v1/activities/parks';
+    const url = `${activitiesEndpoint}?id=${activityIds}&api_key=${npsApiKey}&limit=50`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.data && data.data.length > 0) {
+            document.getElementById("locationOutput").innerHTML = `<h3 class="text-xl font-bold">Parks with your activities:</h3>`;
+
+            data.data.forEach(activity => {
+                activity.parks.forEach(park => {
+                    document.getElementById("locationOutput").innerHTML += `
+                        <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 max-w-md mx-auto mt-6">
+                            <h3 class="text-2xl font-mono font-bold mb-2">${park.fullName}</h3>
+                            <p class="text-gray-700 font-mono mb-4">${park.states}</p>
+                            <a href="${park.url}" target="_blank" class="text-blue-500 font-mono hover:underline">Learn more</a>
+                        </div>
+                    `;
+                });
+            });
+        } else {
+            document.getElementById("locationOutput").innerText = "No parks found with the selected activities.";
         }
     } catch (error) {
         document.getElementById("locationOutput").innerText = "Error fetching park data.";

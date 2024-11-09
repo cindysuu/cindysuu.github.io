@@ -761,14 +761,6 @@ video {
   cursor: pointer;
 }
 
-.list-outside {
-  list-style-position: outside;
-}
-
-.list-disc {
-  list-style-type: disc;
-}
-
 .list-none {
   list-style-type: none;
 }
@@ -779,6 +771,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -815,12 +811,6 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -921,11 +911,6 @@ video {
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.bg-green-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
 }
 
 .bg-green-700 {
@@ -1275,6 +1260,143 @@ body {
   opacity: 0;
 }
 
+/* Blog list */
+
+.blog-post {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.5;
+  padding: 1rem;
+  padding-right: 10rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-post:hover {
+  box-shadow: 0 0px 10px rgba(59, 130, 246, 0.7);
+  transform: scale(1.01);
+}
+
+.blog-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .blog-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.blog-description {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(255 255 255 / 0.8);
+}
+
+@media (min-width: 768px) {
+  .blog-description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.blog-date {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(255 255 255 / 0.6);
+}
+
+@media (min-width: 768px) {
+  .blog-date {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* Blog content */
+
+/* .blog-content {
+    @apply bg-white bg-opacity-100 p-6 m-10 rounded-lg shadow-md text-black;
+    @apply bg-blue-500 bg-opacity-50 p-4 pr-40 rounded-lg mb-4 shadow-md text-white;
+} */
+
+.blog-heading {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .blog-heading {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.blog-subheading {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .blog-subheading {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.blog-list {
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+.blog-list > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.blog-list {
+  padding-left: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.blog-list-item {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .blog-list-item {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
@@ -1444,11 +1566,6 @@ body {
     line-height: 2rem;
   }
 
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -1545,6 +1662,11 @@ body {
   .dark\:focus\:ring-gray-700:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(55 65 81 / var(--tw-ring-opacity));
+  }
+
+  .dark\:focus\:ring-orange-700:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(194 65 12 / var(--tw-ring-opacity));
   }
 
   .dark\:focus\:ring-orange-800:focus {
