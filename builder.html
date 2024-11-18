@@ -68,7 +68,8 @@
             </p>
                   
             <!-- Modal -->
-            <button onclick="openModal()" class="mx-4 flex items-center px-5 py-2.5 text-sm font-medium text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+            <button onclick="openModal('futures-modal')" class="mx-4 flex items-center px-5 py-2.5 text-sm font-medium text-white bg-orange-700 rounded-lg hover:bg-orange-800
+            focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
               Read more
               <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -96,12 +97,12 @@
             </div>
         	</div>
         </div>
-		<div id="myModal" class="fixed inset-0 hidden bg-gray-800 bg-opacity-75 flex items-center justify-center">
+		    <div id="futures-modal" class="fixed inset-0 hidden bg-gray-800 bg-opacity-75 flex items-center justify-center">
             <!-- <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full"> -->
             <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl max-h-[80vh] overflow-y-auto">
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800">Thoughts</h3>
-                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-800">&times;</button>
+                    <h3 class="text-2xl font-semibold text-gray-800">Inspiration</h3>
+                    <button onclick="closeModal('futures-modal')" class="text-gray-500 hover:text-gray-800">&times;</button>
                 </div>
                 <p class="text-gray-600">I recently came to the uncomfortable realization that I know nothing about personal finances–how to manage my spending,
                   how to choose a credit card, and most importantly, how to invest. This led me and a few friends to the idea of building
@@ -126,7 +127,7 @@
                   <img src="Futures Updated/Futures Updated.010.jpeg" class="w-full rounded-lg">
                   <img src="Futures Updated/Futures Updated.011.jpeg" class="w-full rounded-lg">
                 </div>
-                <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Close</button>
+                <button onclick="closeModal('futures-modal')" class="mt-4 px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Close</button>
             </div>
         </div>
 
@@ -248,6 +249,70 @@
           </div>
       </div>
 
+      <!-- Project Card 7 -->
+      <div class="w-full max-w-xs sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <p class="text-6xl mt-4 mx-4">👚</p>
+        <div class="p-4 sm:p-5">
+          <a href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Obsessed</h5>
+          </a>
+
+          <!-- Tools -->
+          <p class="mb-3 font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-700 p-2 text-center">
+            ?
+          </p>
+
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Don't just like your clothing options, be obsessed with them. Working on building a platform that helps users 
+            find fashion ideas that resonate with them, whether its the concept of a monochrome outfit or shopping for vintage
+            pieces. The idea is to inspire users based off of timeless design concepts rather than brands or trends, to form 
+            a more sustainable and personal relationship with their clothing and style.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Card 8 -->
+      <div class="w-full max-w-xs sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <p class="text-6xl mt-4 mx-4">🥑</p>
+        <div class="p-4 sm:p-5">
+          <a href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Foodie</h5>
+          </a>
+
+          <!-- Tools -->
+          <p class="mb-3 font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-700 p-2 text-center">
+            ?
+          </p>
+
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            A concept to think about, inspired by Beli. The idea is for people to be able to store their favorite recipes 
+            in one place, and get taste profiles and recommendations of what to try from their friends' recipes.
+          </p>
+
+          <!-- Modal -->
+          <button onclick="openModal('foodie-modal')" class="mx-4 flex items-center px-5 py-2.5 text-sm font-medium text-white bg-orange-700 rounded-lg hover:bg-orange-800
+          focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+            Read more
+            <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+          </button>
+
+          <div id="foodie-modal" class="fixed inset-0 hidden bg-gray-800 bg-opacity-75 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl max-h-[80vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-800">Figma</h3>
+                    <button onclick="closeModal('foodie-modal')" class="text-gray-500 hover:text-gray-800">&times;</button>
+                </div>
+                <div class="mt-4 space-y-4">
+                  <img src="media/foodie.jpg" class="w-full rounded-lg">
+                </div>
+                <button onclick="closeModal('foodie-modal')" class="mt-4 px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 		<!-- More coming soon -->
 		<div class="flex justify-center items-center mt-8">
 			<p class="text-xl text-gray-400">Coming soon...</p>
@@ -277,5 +342,6 @@
     </div>
     <p class="mt-2 text-sm text-center">&copy; 2024 Cindy Su.</p>
   </footer>
+
 </body>
 </html>

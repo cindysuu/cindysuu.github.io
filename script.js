@@ -43,12 +43,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Modal functions
-function openModal() {
-    document.getElementById("myModal").classList.remove("hidden");
+function openModal(modalId) {
+    const modal = document.getElementById(modalId)
+    if (!modal) {
+        console.error(`Modal with ID "${modalId}" not found.`);
+        return;
+    }
+    modal.classList.remove("hidden");
 }
 
-function closeModal() {
-    document.getElementById("myModal").classList.add("hidden");
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId)
+    if (!modal) {
+        console.error(`Modal with ID "${modalId}" not found.`);
+        return;
+    }
+    modal.classList.add("hidden");
 }
   
 // Fade in/out transition
