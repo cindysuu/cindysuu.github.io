@@ -20,15 +20,17 @@
     <script src="loadHeader.js"></script>
 
     <div class="flex justify-center w-full mt-20">
-        <div class="w-full h-100 md:w-1/2 bg-green-700 p-8 flex flex-col items-center text-white">
-            <h1 class="text-lg md:text-xl md:text-2xl font-mono mb-4 mt-10 text-center">Get a National Park Near You</h1>
-            <div class="flex space-x-2 md:space-x-4 justify-center items-center mb-6">
-                <button onclick="getLocation()" class="text-sm md:text-lg bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+        <!-- <div class="w-full h-100 md:w-1/2 bg-green-700 p-8 flex flex-col items-center text-white rounded-lg"> -->
+        <div class="w-full h-100 md:w-1/2 p-8 flex flex-col items-center text-white">
+            <h1 class="text-lg md:text-xl md:text-2xl mb-4 text-center">Find a National Park Near You</h1>
+            <h1 class="text-md md:text-md md:text-lg mb-4 mt-2 text-center"><em>"Look deep into nature, and then you will understand everything better"</em></h1>
+            <div class="flex space-x-2 md:space-x-4 justify-center items-center mt-10 mb-6">
+                <button onclick="getLocation()" class="text-sm md:text-lg bg-gradient-to-r from-emerald-400 to-emerald-600 text-white px-4 py-2 rounded hover:from-emerald-500 hover:to-emerald-700">
                     <!-- Generate using current location -->
                     Use current location
                 </button>
-                <p class="font-mono">or</p>
-                <button onclick="getRandomPark()" class="text-sm md:text-lg bg-green-900 text-white font-mono px-4 py-2 rounded hover:bg-green-800">
+                <p>or</p>
+                <button onclick="getRandomPark()" class="text-sm md:text-lg bg-gradient-to-r from-emerald-400 to-emerald-600 text-white px-4 py-2 rounded hover:from-emerald-500 hover:to-emerald-700">
                     Surprise me
                 </button>
             </div>
